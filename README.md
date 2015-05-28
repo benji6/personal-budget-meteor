@@ -1,2 +1,2 @@
 # Personal Budget
-Built using Meteor
+Prototype app for managing personal budgets built using Meteor.
