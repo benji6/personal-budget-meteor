@@ -1,11 +1,3 @@
-<head>
-  <meta charset="utf-8">
-  <meta name=viewport content="width=device-width, initial-scale=1">
-  <title>Personal Budget</title>
-  <link rel="stylesheet" href="//code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.min.css">
-  <script src="//code.jquery.com/jquery-1.10.2.min.js"></script>
-  <script src="//code.jquery.com/ui/1.11.4/jquery-ui.min.js"></script>
-</head>
 <body>
   <div class="center">
     <header>
@@ -31,7 +23,7 @@
       <p><label><span>Amount: </span><input name="amount" type="number" step="0.01" min="0.01" placeholder="Enter Amount" required></label></p>
       <p><span></span><input type="submit" value="Record Transaction"></p>
     </form>
-    <h3>Most Recent Transactions</h3>
+    <h3>5 Most Recent Transactions</h3>
     <table>
       <thead>
         <tr>
@@ -41,19 +33,10 @@
         </tr>
       </thead>
       <tbody>
-        {{#each transactions}}
+        {{#each mostRecentTransactions}}
           {{> transaction}}
         {{/each}}
       </tbody>
     </table>
   </div>
 </body>
-
-<template name="transaction">
-  <tr>
-    <td>{{date}}</td>
-    <td>{{type}}</td>
-    <td>{{amount}}</td>
-    <td><button class="delete">&times;</button></td>
-  </tr>
-</template>

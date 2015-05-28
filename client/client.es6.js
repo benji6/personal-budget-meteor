@@ -12,7 +12,7 @@ Template.body.events({
 });
 
 Template.body.helpers({
-  transactions: () => Transactions.find({}, {sort: {date: -1}}),
+  mostRecentTransactions: () => Transactions.find({}, {sort: {date: -1}, limit: 5}),
 });
 
 Template.body.rendered = () => $(".datepicker").datepicker();
