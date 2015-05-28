@@ -1,16 +1,7 @@
-<body>
+<template name="enter_transactions">
   <div class="center">
-    <header>
-      <h1>Personal Budget</h1>
-      <nav>
-        <ul>
-          <li>Enter Transactions</li>
-          <li>Set Budget</li>
-          <li>View Performance</li>
-          <li>View Summary</li>
-        </ul>
-      </nav>
-    </header>
+    {{> header}}
+
     <form class="new-transaction">
       <p><label><span>Date: </span><input name="date" class="datepicker" placeholder="Select Date" required></label></p>
       <p><label><span>Transaction Type: </span>
@@ -39,4 +30,4 @@
       </tbody>
     </table>
   </div>
-</body>
+</template>

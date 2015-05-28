@@ -1,21 +1,21 @@
-Template.body.events({
+Template.enter_transactions.events({
   "submit .new-transaction": (e) => {
-    const form = e.target;
+    const {amount, date, type} = e.target;
     Meteor.call("addTransaction", {
-      date: form.date.value,
-      type: form.type.value,
-      amount: form.amount.value,
+      date: date.value,
+      type: type.value,
+      amount: amount.value,
     });
     form.reset();
     e.preventDefault();
   },
 });
 
-Template.body.helpers({
+Template.enter_transactions.helpers({
   mostRecentTransactions: () => Transactions.find({}, {sort: {date: -1}, limit: 5}),
 });
 
-Template.body.rendered = () => $(".datepicker").datepicker();
+Template.enter_transactions.rendered = () => $(".datepicker").datepicker({dateFormat: "dd/mm/yy"});
 
 Template.transaction.events({
   "click .delete": function () {
