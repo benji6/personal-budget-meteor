@@ -1,0 +1,16 @@
+form {
+  input {
+    width: $input-width;
+  }
+
+  select {
+    width: $input-width;
+  }
+
+  span {
+    display: inline-block;
+    margin-right: 0.5em;
+    text-align: left;
+    width: $form-label-width;
+  }
+}

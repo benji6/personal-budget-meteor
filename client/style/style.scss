@@ -1,35 +1,15 @@
 @import "_vars";
+@import "_header";
+@import "_form";
 
 body {
   background: $white;
   color: $black;
   font-family: sans-serif;
-
-  form {
-    input {
-      width: $input-width;
-    }
-
-    select {
-      width: $input-width;
-    }
-
-    span {
-      display: inline-block;
-      margin-right: 0.5em;
-      text-align: left;
-      width: $form-label-width;
-    }
-  }
+  margin: 0;
 
   h1, h3 {
     font-weight: inherit;
-  }
-
-  nav {
-    ul {
-      list-style: none;
-    }
   }
 
   table {
