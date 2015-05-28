@@ -18,5 +18,7 @@ Template.body.helpers({
 Template.body.rendered = () => $(".datepicker").datepicker();
 
 Template.transaction.events({
-  "click .delete": () => Meteor.call("deleteTransaction", this._id),
+  "click .delete": function () {
+    Meteor.call("deleteTransaction", this._id);
+  },
 });
