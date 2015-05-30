@@ -11,8 +11,4 @@ Template.enter_transactions.events({
   },
 });
 
-Template.enter_transactions.helpers({
-  mostRecentTransactions: () => Transactions.find({}, {sort: {date: -1}, limit: 5}),
-});
-
 Template.enter_transactions.rendered = () => $(".datepicker").datepicker({dateFormat: "dd/mm/yy"});
