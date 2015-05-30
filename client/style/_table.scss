@@ -1,27 +1,44 @@
 table {
+  border-collapse: collapse;
   border-radius: 1em;
   box-shadow: 0 0 0.5em 0.2em $light-gray;
   display: inline-block;
   margin: 1em auto;
   padding: 2em;
 
-  h3 {
-    margin: 1em 0 1.5em;
+  thead {
+    h3 {
+      margin: 1em 0 1.5em;
+    }
+
+    th {
+      font-weight: inherit;
+      font-size: 1.1em;
+    }
   }
 
-  th {
-    font-weight: inherit;
-    font-size: 1.1em;
-  }
+  tbody {
+    border: 0.1em solid $pale-gray;
 
-  td {
-    padding: 0.2em 1em;
-  }
+    tr {
+      background: linear-gradient(top, $pale-gray, $white 33%, $white 67%, $pale-gray);
 
-  button.delete {
-    font-weight: 700;
-    background: none;
-    font-size: 1em;
-    border: none;
+      &:hover {
+        background: linear-gradient(top, $light-gray, $white 33%, $white 67%, $light-gray);
+        box-shadow: $pale-gray 0 0 0.5em;
+      }
+
+      td {
+        padding: 0.2em 1em;
+
+        button.delete {
+          background: none;
+          border: none;
+          font-size: 1.5em;
+          font-weight: 700;
+          padding: 0 1em;
+        }
+      }
+    }
   }
 }
