@@ -4,7 +4,7 @@ Template.enter_transactions.events({
     Meteor.call("addTransaction", {
       date: date.value,
       type: type.value,
-      amount: amount.value,
+      amount: Number(amount.value),
     });
     form.reset();
     e.preventDefault();
