@@ -1,6 +1,4 @@
 @import "_vars";
-@import "_header";
-@import "_form";
 
 body {
   background: $off-white;
@@ -12,16 +10,14 @@ body {
     font-weight: inherit;
   }
 
-  table {
-    margin: auto;
-
-    th {
-      font-weight: inherit;
-      font-size: 1.1em;
-    }
+  h3 {
+    margin: 2em 0 1em 0;
   }
 
   .center {
     text-align: center;
   }
+
+  @import "_header";
+  @import "_form";
 }

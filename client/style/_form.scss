@@ -1,7 +1,16 @@
 form {
-  input, select {
-    width: $input-width;
-    box-sizing: content-box;
+  border-radius: 1em;
+  box-shadow: 0 0 0.5em 0.2em $light-gray;
+  display: inline-block;
+  margin: 0 1em;
+  padding: 2em;
+
+  h3 {
+    margin: 1em 0 1.5em;
+  }
+
+  input {
+    text-indent: 4px;
   }
 
   input, select {
@@ -9,8 +18,11 @@ form {
     border: 0.1em solid darken($off-white, 20%);
     border-radius: 0.5em;
     box-shadow: $light-gray 0 0 0.5em;
+    box-sizing: border-box;
+    margin: 1em;
     outline: 0;
     padding: 0.75em;
+    width: $input-width;
 
     &:hover, &:focus {
       border-color: $pale-gray;
@@ -39,11 +51,14 @@ form {
     text-align: left;
     width: $form-span-width;
   }
+}
 
-  @media all and (max-width: $input-width + $form-span-width) {
-    label {
-
+@media all and (max-width: $input-width + $form-span-width) {
+  form {
+    h3 {
+      margin: 1em 0;
     }
+
     span {
       margin: 1em 0;
       text-align: center;
