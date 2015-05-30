@@ -20,7 +20,7 @@ header {
           color: $gray;
 
           &.selected {
-            color: darken($gray, 33%);
+            color: $dark-gray;
 
             &:hover {
               @extend &.selected;
@@ -29,6 +29,48 @@ header {
 
           &:hover {
             color: darken($gray, 18%);
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 32rem) {
+  header {
+    margin-bottom: 2em;
+    padding-bottom: 4em;
+
+    nav {
+      position: relative;
+
+      ul {
+        background: $white;
+        border: solid 0.1em $border-gray;
+        border-radius: 0.5em;
+        box-shadow: 0.05em 0.1em 0.2em $dark-gray;
+        left: 1em;
+        padding: 0.5em 0;
+        position: absolute;
+        top: 0;
+        width: 16em;
+
+        &:hover li a {
+          display: block;
+        }
+
+        li {
+          display: block;
+          margin: 0;
+
+          a {
+            display: none;
+            padding: 0.5em;
+
+            &.selected {
+              color: $dark-gray;
+              display: block;
+            }
           }
         }
       }
