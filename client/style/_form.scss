@@ -1,16 +1,52 @@
 form {
-  input {
+  input, select {
     width: $input-width;
+    box-sizing: content-box;
   }
 
-  select {
-    width: $input-width;
+  input, select {
+    background: linear-gradient(top, lighten($pale-gray, 2%), $white 65%);
+    border: 0.1em solid darken($off-white, 20%);
+    border-radius: 0.5em;
+    box-shadow: $light-gray 0 0 0.5em;
+    outline: 0;
+    padding: 0.75em;
+
+    &:hover, &:focus {
+      border-color: $pale-gray;
+      box-shadow: $pale-gray 0 0 0.5em;
+    }
+
+    &[type="submit"] {
+      background: $blue;
+      border: 0;
+      box-shadow: $blue 0 0 0.5em;
+      color: $white;
+      padding: 1em;
+      margin-left: $input-width / 3;
+      width: $input-width * 2 / 3;
+
+      &:hover {
+        background: radial-gradient(lighten($blue, 5%), $blue);
+        box-shadow: $pale-gray 0 0 0.5em;
+      }
+    }
   }
 
   span {
     display: inline-block;
     margin-right: 0.5em;
     text-align: left;
-    width: $form-label-width;
+    width: $form-span-width;
+  }
+
+  @media all and (max-width: $input-width + $form-span-width) {
+    label {
+
+    }
+    span {
+      margin: 1em 0;
+      text-align: center;
+    }
   }
 }

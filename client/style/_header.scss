@@ -36,7 +36,7 @@ header {
   }
 }
 
-@media screen and (max-width: 32rem) {
+@media all and (max-width: 32rem) {
   header {
     margin-bottom: 2em;
     padding-bottom: 4em;
@@ -46,14 +46,14 @@ header {
 
       ul {
         background: $white;
-        border: solid 0.1em $border-gray;
+        border: solid 0.1em $light-gray;
         border-radius: 0.5em;
         box-shadow: 0.05em 0.1em 0.2em $dark-gray;
         left: 1em;
         padding: 0.5em 0;
         position: absolute;
         top: 0;
-        width: 16em;
+        width: 14em;
 
         &:hover li a {
           display: block;

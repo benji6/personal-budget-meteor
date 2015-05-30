@@ -3,15 +3,15 @@
     {{> header}}
 
     <form class="new-transaction">
-      <p><label><span>Date: </span><input name="date" class="datepicker" placeholder="Select Date" required></label></p>
-      <p><label><span>Transaction Type: </span>
+      <p><label><span>Date</span><input name="date" class="datepicker" placeholder="Select Date" required></label></p>
+      <p><label><span>Transaction Type</span>
         <select name="type" required>
           <option value="" disabled selected>Select Type</option>
           <option>Transport</option>
           <option>Food</option>
         </select>
       </label></p>
-      <p><label><span>Amount: </span><input name="amount" type="number" step="0.01" min="0.01" placeholder="Enter Amount" required></label></p>
+      <p><label><span>Amount</span><input name="amount" type="number" step="0.01" min="0.01" placeholder="Enter Amount" required></label></p>
       <p><span></span><input type="submit" value="Record Transaction"></p>
     </form>
     <h3>5 Most Recent Transactions</h3>
